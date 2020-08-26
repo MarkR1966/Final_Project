@@ -10,7 +10,7 @@ variable "ami_id" {
 
 variable "key_name" {
   description = "This variable states the key pair used for all new EC2 instances"
-  default     = "mmcga"
+  default     = "donkeykp"
 }
 
 variable "subnet_id" {
