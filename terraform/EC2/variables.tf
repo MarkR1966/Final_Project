@@ -19,12 +19,12 @@ variable "subnet_id" {
 
 variable "name" {
   description = "Name of EC2 Instance"
-  default = "TFEC2"
+  default     = "TFEC2"
 }
 
 variable "enable_public_ip" {
   description = "Enable if EC2 instace should have public ip address"
-  default = true
+  default     = true
 }
 
 variable "vpc_security_group_ids" {
@@ -33,5 +33,5 @@ variable "vpc_security_group_ids" {
 
 variable "user_data" {
   description = "script to run when creating instance"
-  default = "data.template_file.init.rendered"
+  default     = "data.template_file.init.rendered"
 }

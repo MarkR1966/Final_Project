@@ -1,7 +1,7 @@
 resource "aws_security_group" "sg_web" {
   name        = var.sg_web_name
   description = var.sg_web_description
-  vpc_id = var.vpc_id
+  vpc_id      = var.vpc_id
 
   dynamic "ingress" {
     iterator = port

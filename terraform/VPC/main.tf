@@ -14,11 +14,24 @@ data "aws_availability_zones" "available" {
 
 resource "aws_subnet" "subnet_a" {
   vpc_id            = aws_vpc.vpc.id
-  cidr_block        = var.sn_cidr_block
+  cidr_block        = var.sn_cidr_block_a
   availability_zone = data.aws_availability_zones.available.names[0]
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "FP_VPC Subnet A"
+  }
+
+}
+
+resource "aws_subnet" "subnet_b" {
+  vpc_id            = aws_vpc.vpc.id
+  cidr_block        = var.sn_cidr_block_b
+  availability_zone = data.aws_availability_zones.available.names[1]
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "FP_VPC Subnet B"
   }
 
 }
