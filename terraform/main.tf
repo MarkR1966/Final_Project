@@ -41,9 +41,9 @@ module "master_node" {
   user_data = data.template_file.init.rendered
 }
 
-module "worker_node" {
-  source = "./EC2"
-  name = "Worker"
-  subnet_id = module.FP_VPC.subnet_a_id
-  vpc_security_group_ids = [module.sg_worker_myip.sg_id]
-}
+# module "worker_node" {
+#   source = "./EC2"
+#   name = "Worker"
+#   subnet_id = module.FP_VPC.subnet_a_id
+#   vpc_security_group_ids = [module.sg_worker_myip.sg_id]
+# }
