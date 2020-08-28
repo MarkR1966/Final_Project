@@ -13,7 +13,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 # Update to ensure all latest files
 sudo apt update -y
 # Install docker
-sudo apt install docker-ce -y
+sudo apt install docker.io -y
 # Add system user to docker group
 sudo usermod -aG docker ubuntu
 
