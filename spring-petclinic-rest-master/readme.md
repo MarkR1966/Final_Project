@@ -38,7 +38,7 @@ You can then access petclinic here: [http://localhost:9966/petclinic/](http://lo
 Our issue tracker is available here: https://github.com/spring-petclinic/spring-petclinic-rest/issues
 
 
-## Database configuration
+## Database configuration.
 
 In its default configuration, Petclinic uses an in-memory database (HSQLDB) which
 gets populated at startup with data.
