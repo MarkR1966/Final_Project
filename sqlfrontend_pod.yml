@@ -9,7 +9,7 @@ spec:
         - protocol: TCP
           port: 4200
           targetPort: 4200
-    type: ClusterIP
+    type: LoadBalancer
 
 ---
     
