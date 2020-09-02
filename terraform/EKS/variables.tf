@@ -5,5 +5,5 @@ variable "subnet_ids" {
 
 variable "instance" {
   description = "This variable states the instance type for your EC2"
-  default     = "t2.micro"
+  default     = "t2.medium"
 }

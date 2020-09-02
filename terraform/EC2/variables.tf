@@ -1,11 +1,11 @@
 variable "instance" {
   description = "This variable states the instance type for your EC2"
-  default     = "t2.micro"
+  default     = "t2.medium"
 }
 
 variable "ami_id" {
   description = "This variable states which ami to use for new EC2 instances"
-  default     = "ami-0260b04e33d3a720f"
+  default     = "ami-08324a3cb076b5dc0"
 }
 
 variable "key_name" {

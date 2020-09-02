@@ -1,0 +1,57 @@
+// Requirements for jenkins to automaticall build the application requirements
+pipeline {
+
+    agent any
+
+    stages{
+        // Do initial setup
+        stage('Setup Environment'){
+
+            steps {
+
+                sh 'chmod +x ./scripts/*.sh'
+
+            }
+
+        }
+        // Build required images for Frontend and Backend
+        stage('Build Images') {
+
+            steps {
+
+                sh './scripts/build_images.sh'
+                }
+
+        }
+        // Deploy the images to the Docker Swarm
+        stage('Build Services') {
+        
+            steps {
+                    
+                sh './scripts/build_services.sh'
+                }
+
+        }
+        // Remove any unused containers and images from swarm_manager and swarm_worker
+        stage("remove old images from swarm-worker") {
+
+            steps {
+
+                sh 'ansible-playbook -i inventory.cfg playbook2.yml'
+
+            }
+
+        }
+        stage("remove old images from swarm-manager") {
+
+            steps {
+
+                sh 'docker system prune -af'
+
+            }
+
+        }
+
+    }
+
+}
