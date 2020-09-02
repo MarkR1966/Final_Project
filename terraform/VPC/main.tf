@@ -3,7 +3,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "FP_VPC"
+    Name = "FP2_VPC"
   }
 
 }
@@ -19,7 +19,7 @@ resource "aws_subnet" "subnet_a" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "FP_VPC Subnet A"
+    Name = "FP2_VPC Subnet A"
   }
 
 }
@@ -31,7 +31,7 @@ resource "aws_subnet" "subnet_b" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "FP_VPC Subnet B"
+    Name = "FP2_VPC Subnet B"
   }
 
 }
@@ -40,7 +40,7 @@ resource "aws_internet_gateway" "vpc_igw" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    Name = "FP_VPC_IGW"
+    Name = "FP2_VPC_IGW"
   }
 
 }
@@ -54,7 +54,7 @@ resource "aws_route_table" "vpc_rt" {
   }
 
   tags = {
-    Name = "FP_VPC_RT"
+    Name = "FP2_VPC_RT"
   }
 
 }
