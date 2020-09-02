@@ -122,7 +122,7 @@ As our key task was to deliver an automated deployment framework task required w
 + All process flows automated.
 + Monitoring of services and infrastructure.
 + Mature use of available cloud technologies.
-+ SRE and security conscious work approaches.
++ Security-conscious approach to work adhering to the principal of least privilege.
 
 #### Could Have
 
@@ -133,3 +133,51 @@ As our key task was to deliver an automated deployment framework task required w
 + DNS allocated entrypoints.
 + Full traffic tracing provision.
 + Fully serverless architecture.
+
+### Start Point
+
+![Screen shot of trello board first set up.](https://imgur.com/f9KebZB.png)
+
+At the start of the project, we focussed on our understanding of an initial plan: Starting the [Trello board](https://trello.com/b/iK9zZxbI/devops-final-project-group), starting this documentation to streamline future workflow; instituting a github repository for the project, which can be found [here](https://github.com/THC-QA/qa_group_project); and initialising the risk assessment for the project in line with initial understandings.
+
+### End Point
+
+![Screen shot of Treelo Board after deliverables met, TO BE ADDED](.png)
+
+By the end of the project our key deliverables had been completed. 
+
+Throughout the project the Trello Board had been continusly updated with task beeing moved from the 'Task Backlog' to 'In Progress' and the 'Completed'. To keep track of what issues incountered were added to the 'Issues Log'  and any task that need to be modified or dropped were moved into 'Changed/Abandoned Tasks'
+
+#### What Went Well
+
++ IaC enabled broad deployment with a region agnostic approach.
++ Pipeline functioned well in both an automated capacity and for multi-environment deployment.
++ Multifarious usage of Amazon curated services.
++ Multi-implementation of serverless solutions
+
+#### What Could Be Improved
+
++ Little usage was found for configuration management in a project of this scale.
++ CloudTrail user tracking was not implemented for the project.
++ After deliberation, X-RAY was dropped from the project due to difficulties with the daemon.
++ The testing functionality explained in the submodule README could not be implemented, after outside assistance, no solution could be found.
+
+## Risk Assessment
+
+
+|Risk No.|Risk|Description|Hazard|Likelihood|Impact|Solution|
+|---|---|---|---|---|---|---|
+|1.0.1|Overrun on time.|Due to poor time management, the project is not completed.|Worst case scenario, marks are lost due to lack of coverage of brief.|2|5|Make good use of Kanban to manage workflow, and efficient time use of office resources.|
+|1.0.2|Overrun on budget.|Available budget is consumed.|Worst case scenario, we incur out of pocket expenses and are not reinbursed.|3|5|Implement budget warnings on AWS, daily monitoring of expenditure.|
+|1.0.3|Catch coronavirus.|Due to illness, significant amounts of workhours are lost.|Worst case scenario, the remaining team are overburdened.|4|3|Avoid human contact, follow NHS best practice.|
+|1.0.4|Leak of login or key details.|Credentials are version controlled or misplaced.|Worst case scenario, all data is accessible to malicious actors.|3|4|Protect personal data, make use of ignore files and DevSecOps best practices.|
+|1.1.1|Corruption or conflict of respository branches.|Due to team cooperation on a single repository, mismanagement of branches could occur.|Worst case scenario, data lost.|5|4|Make full use of advanced git recovery techniques.|
+|1.1.2.1|Infrastructure: TFState|Infrastructure management is impeded by terraform errors.|Worst case scenario, impedement to workflow.|2|2|Familiarisation with terraform cli.|
+|1.1.2.2|Infrastucture: Networking|Connections between modules are non-functional but not errors.| Worst case scenario, project modules fail to initialise or communicate.|3|4|Check-off new infrastructure status using AWS web GUI.|
+|1.1.2.3|Infrastructure: Permissions|Mismanagement of keys or roles enables malpractice.|Worst case scenario, vulnerabilites are introduced into security practices.|2|5|Roles and Users are only allowed relevant permissions, and key handling and spread is minimised.|
+|1.2.1|Kubernetes: networking|Application incorrectly networked.|Worst case scenario, application fails to run.|3|5|Carefully research relevant documentation|
+|1.2.2|Kubernetes: scaling|Application fails to scale.|Worst case scenario, application cannot be expanded on demand.|2|4|Correctly implement AWS monitoring and response.|
+|1.3.1|Jenkins pipeline integration|Jenkins compatability with GitHub webhooks.|Worst case scenario builds are not triggered, resulting in inconsistent builds.|3|1|Maintain webhooks and pull/push requests, ensure branches merged correctly.|
+|1.3.2|Jenkins server exposed.|Port 8080 open to webtraffic is poor working practice.|Worst case scenario, introduce systemic vulnerabilities into build server.|5|2|Set firewall rules to only allow specific access.|
+|1.4.1|Lambda: triggers|Lambda functions cannot be correctly triggered.|Incomplete backup and recovery system for the project.|3|3|Investigate correct usage of CloudWatch and SNS.|
+|1.4.2|Lambda: dependencies|Lambda functions fail to chain correctly.|Backup and recovery system has incomplete or chaotic functionality.|2|3|Creation and maintenance of multiple co-dependent lambda functions.|
