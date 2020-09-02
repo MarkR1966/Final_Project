@@ -93,4 +93,4 @@ Our proposal focused on making an automated workflow focusing on the below archi
 + A Kubernetes (AWS EKS) cluster running the app.
 + Monitoring of the project using AWS tools such as CloudWatch.
 
-![initial project architecture Diagram](https://imgur.com/u9W2mBt)
+![initial project architecture Diagram](https://imgur.com/u9W2mBt.png)
