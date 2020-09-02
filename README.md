@@ -94,3 +94,42 @@ Our proposal focused on making an automated workflow focusing on the below archi
 + Monitoring of the project using AWS tools such as CloudWatch.
 
 ![initial project architecture Diagram](https://imgur.com/u9W2mBt.png)
+
+THe above inital architecture diagram was layed out at the beging of sprint 1.
+Showing the basic layout for how the app would be hosted and what services would be running, it also displays how the tools in the CI pipe line interact and where information is padssd between them
+
+## Trello Board
+
+We used a Trello Board to manage our work flow throughout the project. Set up so that every one on the team can see and edit it we impletemnted an Agile work flow inline with the brief for the project. AS we were limited for time for this project we only considered the two weeks as one sprint. We held daly stand up meeting at the star of each day and regular catch up meeting through out to ensure that we were on task and that the we were able to keep up with the work flow. 
+
+In pur Trello board we also had a out MoSCoW prioritisation as is shown below
+
+As our key task was to deliver an automated deployment framework task required were subdeived and assigned. These tasks, generated in the backlog as required, could be moved across the board from 'in progress' to 'Complete' during their development lifecycle. Delivery endpoints were designated 'Completed' or moved to 'Issues Log'. Reassessment of priorities was evaluated daily as a group; some items which were considered inefficient, or were superceded by more mature technologies, were abandoned.
+
+### MoSCoW Analysis
+
+#### Must Have
+
++ Fully version controlled architecture.
++ Webhooked CI/CD builds.
++ Deployment to multiple environments.
++ IaC automated provisioning.
++ Budgeting.
+
+#### Should Have
+
++ Load balanced and auto scaling services.
++ All process flows automated.
++ Monitoring of services and infrastructure.
++ Mature use of available cloud technologies.
++ SRE and security conscious work approaches.
+
+#### Could Have
+
++ Serverless function for backup.
++ Serverless function for backup maintenance.
++ Serveless function for instance recovery.
++ HTTPS certification as a security provision.
++ DNS allocated entrypoints.
++ Full traffic tracing provision.
++ Fully serverless architecture.
