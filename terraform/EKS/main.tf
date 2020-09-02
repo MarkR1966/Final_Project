@@ -82,12 +82,15 @@ resource "aws_eks_node_group" "fp-eks-node-group" {
   node_group_name = "fp-eks-node-group"
   node_role_arn   = aws_iam_role.fp-eks-node-group-role.arn
   subnet_ids      = var.subnet_ids #aws_subnet.fp-eks-node-group[*].id
-  instance_types = [var.instance]
+  instance_types  = [var.instance]
+  tags = {
+    Name = "K8-Worker"
+  }
 
   scaling_config {
-    desired_size = 1
+    desired_size = 2
     max_size     = 3
-    min_size     = 1
+    min_size     = 2
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Node Group handling.

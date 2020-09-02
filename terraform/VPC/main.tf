@@ -3,7 +3,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "FP2_VPC"
+    Name = "FP_VPC"
   }
 
 }
@@ -13,25 +13,25 @@ data "aws_availability_zones" "available" {
 }
 
 resource "aws_subnet" "subnet_a" {
-  vpc_id            = aws_vpc.vpc.id
-  cidr_block        = var.sn_cidr_block_a
-  availability_zone = data.aws_availability_zones.available.names[0]
+  vpc_id                  = aws_vpc.vpc.id
+  cidr_block              = var.sn_cidr_block_a
+  availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "FP2_VPC Subnet A"
+    Name = "FP_VPC Subnet A"
   }
 
 }
 
 resource "aws_subnet" "subnet_b" {
-  vpc_id            = aws_vpc.vpc.id
-  cidr_block        = var.sn_cidr_block_b
-  availability_zone = data.aws_availability_zones.available.names[1]
+  vpc_id                  = aws_vpc.vpc.id
+  cidr_block              = var.sn_cidr_block_b
+  availability_zone       = data.aws_availability_zones.available.names[1]
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "FP2_VPC Subnet B"
+    Name = "FP_VPC Subnet B"
   }
 
 }
@@ -40,7 +40,7 @@ resource "aws_internet_gateway" "vpc_igw" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    Name = "FP2_VPC_IGW"
+    Name = "FP_VPC_IGW"
   }
 
 }
@@ -54,7 +54,7 @@ resource "aws_route_table" "vpc_rt" {
   }
 
   tags = {
-    Name = "FP2_VPC_RT"
+    Name = "FP_VPC_RT"
   }
 
 }
