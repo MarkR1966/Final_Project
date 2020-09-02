@@ -169,3 +169,22 @@ Our inital risk assedment was carried out before starting work on the prject thi
 ![Screen shot of inital risk assessment](https://imgur.com/RUXltWd.png)
 
 Colour coding the liklyhood and impact coloums allows us to quickly see what the biggest and most hard hitting risks to the are meaning we could focus our attention on avoiding them.
+
+### Budgeting
+
+The budget for the completion of the project was £20. In order to prevent us going over this, in Amazon Billing a budget warning was set up for 50%, and then 80% of available budget.
+Tracking was conducted daily by the group, and brought up in both standups and retrospectives in order to ensure that no out-of-pocket expenses were incurred.
+
+## Project Architecture
+
+### Overall Architecture
+
+#### Interaction and Services
+
+This section aims to demonstrate how user interaction with the app is structured, as well as the interplay between the deployed containers.
+
+![User interaction diagram showing kubernetes architecture.](https://imgur.com/H3REy3T.png)
+
+As can be seen from the diagram, from a user perspective, they are only faced with the output of the frontend container, as balanced by the NGINX over the detailed EKS cluster. Nodes are scaled by terraform-set policy. NGINX also enables HTTPS authentication and dynamic traffic redirection
+
+Shown on the diagram is the connection between the backend container and the database. The usage of a non-local database is optional and is elaborated on in the documentation for the Spring Petclinic REST backend, as found [here](https://github.com/spring-petclinic/spring-petclinic-rest/tree/85bbca8bbe5ccb99efe0643f58ece55491ffec54).
