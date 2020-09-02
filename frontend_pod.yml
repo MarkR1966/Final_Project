@@ -30,6 +30,6 @@ spec:
             hostname: frontend
             containers:
             - name: frontend
-              image: forrow/petclinic_frontend_sql
+              image: forrow/petclinic_frontend
               ports:
               - containerPort: 4200
