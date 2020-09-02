@@ -164,20 +164,8 @@ Throughout the project the Trello Board had been continusly updated with task be
 
 ## Risk Assessment
 
+Our inital risk assedment was carried out before starting work on the prject this alowed us to try an predict and counter act problems before they hindered us. Below is our inital table of risk showing how likly there were to happen and what the impact on the project would be if they did happen. 
 
-|Risk No.|Risk|Description|Hazard|Likelihood|Impact|Solution|
-|---|---|---|---|---|---|---|
-|1.0.1|Overrun on time.|Due to poor time management, the project is not completed.|Worst case scenario, marks are lost due to lack of coverage of brief.|2|5|Make good use of Kanban to manage workflow, and efficient time use of office resources.|
-|1.0.2|Overrun on budget.|Available budget is consumed.|Worst case scenario, we incur out of pocket expenses and are not reinbursed.|3|5|Implement budget warnings on AWS, daily monitoring of expenditure.|
-|1.0.3|Catch coronavirus.|Due to illness, significant amounts of workhours are lost.|Worst case scenario, the remaining team are overburdened.|4|3|Avoid human contact, follow NHS best practice.|
-|1.0.4|Leak of login or key details.|Credentials are version controlled or misplaced.|Worst case scenario, all data is accessible to malicious actors.|3|4|Protect personal data, make use of ignore files and DevSecOps best practices.|
-|1.1.1|Corruption or conflict of respository branches.|Due to team cooperation on a single repository, mismanagement of branches could occur.|Worst case scenario, data lost.|5|4|Make full use of advanced git recovery techniques.|
-|1.1.2.1|Infrastructure: TFState|Infrastructure management is impeded by terraform errors.|Worst case scenario, impedement to workflow.|2|2|Familiarisation with terraform cli.|
-|1.1.2.2|Infrastucture: Networking|Connections between modules are non-functional but not errors.| Worst case scenario, project modules fail to initialise or communicate.|3|4|Check-off new infrastructure status using AWS web GUI.|
-|1.1.2.3|Infrastructure: Permissions|Mismanagement of keys or roles enables malpractice.|Worst case scenario, vulnerabilites are introduced into security practices.|2|5|Roles and Users are only allowed relevant permissions, and key handling and spread is minimised.|
-|1.2.1|Kubernetes: networking|Application incorrectly networked.|Worst case scenario, application fails to run.|3|5|Carefully research relevant documentation|
-|1.2.2|Kubernetes: scaling|Application fails to scale.|Worst case scenario, application cannot be expanded on demand.|2|4|Correctly implement AWS monitoring and response.|
-|1.3.1|Jenkins pipeline integration|Jenkins compatability with GitHub webhooks.|Worst case scenario builds are not triggered, resulting in inconsistent builds.|3|1|Maintain webhooks and pull/push requests, ensure branches merged correctly.|
-|1.3.2|Jenkins server exposed.|Port 8080 open to webtraffic is poor working practice.|Worst case scenario, introduce systemic vulnerabilities into build server.|5|2|Set firewall rules to only allow specific access.|
-|1.4.1|Lambda: triggers|Lambda functions cannot be correctly triggered.|Incomplete backup and recovery system for the project.|3|3|Investigate correct usage of CloudWatch and SNS.|
-|1.4.2|Lambda: dependencies|Lambda functions fail to chain correctly.|Backup and recovery system has incomplete or chaotic functionality.|2|3|Creation and maintenance of multiple co-dependent lambda functions.|
+![Screen shot of inital risk assessment](https://imgur.com/RUXltWd.png)
+
+Colour coding the liklyhood and impact coloums allows us to quickly see what the biggest and most hard hitting risks to the are meaning we could focus our attention on avoiding them.
