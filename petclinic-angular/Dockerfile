@@ -12,4 +12,6 @@ RUN rm -f /usr/share/nginx/html/index.html
 
 COPY ./dist/index.html /usr/share/nginx/html/
 
+COPY ./dist/ /usr/share/nginx/html/
+
 COPY ./frontend.conf ./conf.d/
