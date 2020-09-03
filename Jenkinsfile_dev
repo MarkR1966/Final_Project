@@ -40,6 +40,7 @@ pipeline {
             steps {
 
                 sh 'kubectl crete -f dev_nginx_pods.yml'
+
                 
                 }
 
