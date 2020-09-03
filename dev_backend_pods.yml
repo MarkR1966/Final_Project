@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend
+  name: dev_backend
 spec:
   selector:
-    app: backend
+    app: dev_backend
   ports:
   - protocol: TCP
     port: 9966
@@ -14,23 +14,24 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: dev_backend
   labels:
-    app: backend
+    app: dev_backend
     environment: development
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: dev_backend
   template:
     metadata:
+      name: dev_backend
       labels:
-        app: backend
+        app: dev_backend
     spec:
-      hostname: backend
+      hostname: dev_backend
       containers:
-      - name: backend
+      - name: dev_backend
         image: forrow/petclinic_be
         resources:
           limits:
