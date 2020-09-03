@@ -17,6 +17,7 @@ metadata:
   name: backend
   labels:
     app: backend
+    environment: development
 spec:
   replicas: 1
   selector:

@@ -17,6 +17,7 @@ metadata:
   name: nginx
   labels:
     app: nginx
+    environment: development
 spec:
   selector:
     matchLabels:

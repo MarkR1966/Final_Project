@@ -17,6 +17,7 @@ metadata:
   name: frontend
   labels:
     app: frontend
+    environment: development
 spec:
   replicas: 1      
   selector:
