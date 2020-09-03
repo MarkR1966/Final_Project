@@ -19,7 +19,7 @@ pipeline {
 
             steps {
 
-                sh 'kubectl apply -f backend_pods.yml'
+                sh 'kubectl apply -f dev_backend_pods.yml'
 
             }
 
@@ -29,7 +29,7 @@ pipeline {
 
             steps {
 
-                sh 'kubectl apply -f frontend_pods.yml'
+                sh 'kubectl apply -f dev_frontend_pods.yml'
 
             }
 
@@ -39,7 +39,9 @@ pipeline {
 
             steps {
 
-                sh 'kubectl apply -f nginx_pods.yml'
+                sh 'kubectl apply -f dev_nginx_pods.yml'
+
+
                 }
 
         }

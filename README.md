@@ -33,7 +33,7 @@
 + [Acknowledgements](#acknowledgements)
 
 ### Project Brief
-The brief the team recieved was to deploy a web application (angular js frontend & restful backend) using infratructure as code, containerisation, multi-environment support and continuous integration based on server changes via the VCS. The teams goal was to come up with a solution selecting the best tools for the each job and justify why they had chosen them.
+The brief the team received was to deploy a web application (angular js frontend & restful backend) using infrastructure as code, containerization, multi-environment support and continuous integration based on server changes via the VCS. The teams goal was to come up with a solution selecting the best tools for the each job and justify why they had chosen them.
 
 ## Proposal
 The team proposed a CI pipeline utilising the following architecture tools for the automated workflow.
@@ -42,10 +42,10 @@ The team proposed a CI pipeline utilising the following architecture tools for t
 * __Terraform__ also used for the infrastructure configuration.
 * __Jenkins__ used for Continuous Integration, utilising webhooks to the VCS.
 * __GitHub__ VCS used for feature branch model and version control.
-* __Kubernetes__ cluster containerising and running the app.
+* __Kubernetes__ cluster containerizing and running the app.
 * __CloudWatch__ project monitoring ie cost, upscaling. 
 
-Below shows the inital understanding of the architecture needed for the MVP. Terraform creates and configures the infrastructure(EKS cluster & Jenkins server), Jenkins deploys the app after a code push to the VCS using Kubernetes to the live app. 
+Below shows the initial understanding of the architecture needed for the MVP. Terraform creates and configures the infrastructure(EKS cluster & Jenkins server), Jenkins deploys the app after a code push to the VCS using Kubernetes to the live app. 
 
 <a href="https://ibb.co/6gb4ncZ"><img src="https://i.ibb.co/qk9RyLn/initial-project-diagram.png" alt="initial-project-diagram" border="0" />Initial Architecture</a>
 
@@ -72,19 +72,58 @@ How can changes on the GitHub repository automatically build and deploy to testi
 Running costs. What are your monthly estimates? How could they be improved?
 
 ### Trello Board
+Every member of our team had experience using Trello kanban board so we decided it best to stick with what we know and use it for the workflow, management and tracking of our project. All members could add boards to satisfy needs such as requirements, product backlog, task assignment, sprint detailing and for logging of issues. After the daily stand ups and sprint retro's we would update the boards accordingly. 
+
+We utilized the MoSCoW technique for gather requirements and prioritizing tasks and as the project grew the changes where reflected on the appropriate boards.
+
+<a href="https://ibb.co/Z1S9rV6"><img src="https://i.ibb.co/HpCZyVD/trelloo.png" alt="trelloo" border="0"></a>
 
 ## MoSCoW Analysis
+__Must Have__
+* Version controlled architecture (GitHub).
+* Use webhooked CI/CD builds (Jenkins).
+* Deploy to multiple environments.
+* Infrastructure as code automated provisioning (Terraform).
+* Budgeting (Cloudwatch and SNS).
+
+__Should Have__
+* Load balanced and auto scaling services (NGINX & AWS).
+* All process flows automated (Jenkins).
+* Monitoring of services and infrastructure (Cloudwatch).
+* Mature use of available cloud technologies.
+
+__Could Have__
+* Serverless function for backup.
+* Serverless function for backup maintenance.
+* Serveless function for instance recovery.
 
 ## Start Point
+The starting point for the project was a team meeting where initial roles where discussed based on each team members strengths and how they seen teh project. We assigned hig level tasks such as kanban board creation, aws account set up and role allocation, GitHub repo initialization with team being added and the initial understanding of the architecture design.
 
 ## End Point
+By the end of the project our key deliverables had been completed.
 
+Throughout the project the Trello Board had been continuously updated with task being moved from the 'Task Backlog' to 'In Progress' and the 'Completed'. To keep track of what issues encountered were added to the 'Issues Log' and any task that need to be modified or dropped were moved into 'Changed/Abandoned Tasks'
 
 ### Risk Assessment
+Our initial risk assessment was carried out before starting work on the project this allowed us to try an predict and counter act problems before they hindered us. Below is our initial table of risk showing how likely there were to happen and what the impact on the project would be if they did happen.
+
+![Screen shot of inital risk assessment](https://imgur.com/RUXltWd.png)
+
+Colour coding the likelihood and impact columns allows us to quickly see what the biggest and most hard hitting risks to the are meaning we could focus our attention on avoiding them.
 
 ## Budgeting
+The maximum spend for the project was £20. To make sure we didn't overspend we set up a budget alarm in AWS to notify us if the project went over 50% that way we could evaluate what was costing the most and adjust accordingly. The final spend for the project was under £10.
 
 ### Project Architecture
+
+## Overall Architecture
+# Interaction and Services
+The diagram below details the user interaction with the web app, it also shows the communication with containers.
+
+<a href="https://ibb.co/jybg2p3"><img src="https://i.ibb.co/CbmhZrV/user-Activity.png" alt="user-Activity" border="0" />User Activity</a>
+
+
 
 ## Architecture Design
 
@@ -98,11 +137,6 @@ Running costs. What are your monthly estimates? How could they be improved?
 ## Individual Showcases
 
 
-### Testing
-
-## Local Testing
-
-
 ### Deployment
 
 ## Toolset
@@ -112,6 +146,6 @@ Running costs. What are your monthly estimates? How could they be improved?
 ## Branch and Merge Log
 
 
-### Improvments for Future Versions
+### Improvements for Future Versions
 
 ### Installation and Setup Guide
