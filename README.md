@@ -117,6 +117,7 @@ The maximum spend for the project was £20. To make sure we didn't overspend we 
 
 ### Project Architecture
 
+
 ## Architecture Design
 
 ## Issues Encountered

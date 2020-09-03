@@ -9,7 +9,7 @@ pipeline {
 
             steps {
 
-                sh 'kaws eks update-kubeconfig --name FP-EKS-CLUSTER'
+                sh 'aws eks update-kubeconfig --name FP-EKS-CLUSTER'
 
             }
 
@@ -19,7 +19,7 @@ pipeline {
 
             steps {
 
-                sh 'kubectl create -f backend_pods.yml'
+                sh 'kubectl apply -f backend_pods.yml'
 
             }
 
@@ -29,7 +29,7 @@ pipeline {
 
             steps {
 
-                sh 'kubectl create -f frontend_pods.yml'
+                sh 'kubectl apply -f frontend_pods.yml'
 
             }
 
@@ -39,7 +39,7 @@ pipeline {
 
             steps {
 
-                sh 'kubectl crete -f nginx_pods.yml'
+                sh 'kubectl apply -f nginx_pods.yml'
                 }
 
         }
