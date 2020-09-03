@@ -1,4 +1,5 @@
 resource "aws_cloudwatch_dashboard" "main" {
+  manager_id =var.manager_id
   dashboard_name = "Petclinic_Dashboard"
 
   dashboard_body = <<EOF
@@ -13,8 +14,13 @@ resource "aws_cloudwatch_dashboard" "main" {
       "width":18,
       "height":9,
       "properties":{
-        "metrics":[
-          [ { "expression": "SEARCH('{AWS/EC2,InstanceId} MetricName=\"CPUUtilization\"', 'Average', 300)", "id": "e1" } ]
+        "metrics": [
+          [
+            "AWS/EC2",
+            "CPUUtilization",
+            "InstanceId",
+            "${manager_id}"
+          ]
         ],
         "view": "timeSeries",
         "stacked": false,
