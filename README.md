@@ -33,8 +33,21 @@
 + [Acknowledgements](#acknowledgements)
 
 ### Project Brief
+The brief the team recieved was to deploy a web application (angular js frontend & restful backend) using infratructure as code, containerisation, multi-environment support and continuous integration based on server changes via the VCS. The teams goal was to come up with a solution selecting the best tools for the each job and justify why they had chosen them.
 
 ## Proposal
+The team proposed a CI pipeline utilising the following architecture tools for the automated workflow.
+
+* __Terraform__ used for the infrastructure as code deployment.
+* __Terraform__ also used for the infrastructure configuration.
+* __Jenkins__ used for Continuous Integration, utilising webhooks to the VCS.
+* __GitHub__ VCS used for feature branch model and version control.
+* __Kubernetes__ cluster containerising and running the app.
+* __CloudWatch__ project monitoring ie cost, upscaling. 
+
+Below shows the inital understanding of the architecture needed for the MVP. Terraform creates and configures the infrastructure(EKS cluster & Jenkins server), Jenkins deploys the app after a code push to the VCS using Kubernetes to the live app. 
+
+<a href="https://ibb.co/6gb4ncZ"><img src="https://i.ibb.co/qk9RyLn/initial-project-diagram.png" alt="initial-project-diagram" border="0" />Initial Architecture</a>
 
 ## Scope
 We will be working with these externally developed applications:
