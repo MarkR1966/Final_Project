@@ -1,6 +1,6 @@
 # Final Project
 
-## Spring Pet Clinic
+## Spring Pet Clinic 
 
 #### Authors: Mark Rafferty, Michael McGarrigle, David McCartney, Gary Forrow, Robert Siberry, Peter Smith
 
