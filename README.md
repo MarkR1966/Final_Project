@@ -78,6 +78,7 @@ We utilized the MoSCoW technique for gather requirements and prioritizing tasks 
 
 <a href="https://ibb.co/Z1S9rV6"><img src="https://i.ibb.co/HpCZyVD/trelloo.png" alt="trelloo" border="0"></a>
 
+
 ## MoSCoW Analysis
 __Must Have__
 * Version controlled architecture (GitHub).
