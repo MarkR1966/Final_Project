@@ -46,7 +46,7 @@ module "eks" {
   subnet_ids = [module.FP_VPC.subnet_a_id, module.FP_VPC.subnet_b_id]
 }
 
-# module "cloudwatch" {
-#   source     = "./CW"
-#   manager_id = module.manager_node.ec2_id
-# }
+module "cloudwatch" {
+  source     = "./CW"
+  manager_id = module.manager_node.ec2_id
+}
