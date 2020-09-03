@@ -123,9 +123,9 @@ The diagram below details the user interaction with the web app, it also shows t
 
 <a href="https://ibb.co/jybg2p3"><img src="https://i.ibb.co/CbmhZrV/user-Activity.png" alt="user-Activity" border="0" />User Activity</a>
 
+<a href="https://ibb.co/MV552RS"><img src="https://i.ibb.co/2tYYnjh/Dev-Ops-Toolchain-and-Process-Flow.png" alt="Dev-Ops-Toolchain-and-Process-Flow" border="0"></a><br /><a target='_blank' href='https://geojsonlint.com/'></a><br />
 
 
-## Architecture Design
 
 ## Issues Encountered
 
