@@ -116,6 +116,25 @@ Colour coding the likelihood and impact columns allows us to quickly see what th
 The maximum spend for the project was £20. To make sure we didn't overspend we set up a budget alarm in AWS to notify us if the project went over 50% that way we could evaluate what was costing the most and adjust accordingly. The final spend for the project was under £10.
 
 ### Project Architecture
+Terraform
+
+We implemented our infrastructure using Terraform as this allowed us to create our Infrastructure as Code (IaC).
+
+Using best practices each part of the required infrastructure was implemented as modules, this allowed us to build up the required infrastructure a piece at a time ensuring that they all worked properly together.
+
+This also allowed us to easily resolve any issues that arose as they were only related to the individual module that had just been added.
+
+Modules created were 
+
+VPC - This created the VPC to hold all of the infrastructure, the required subnets over 2 availability zones for resilience, the Internet gateway to allow external traffic through to our VPC and the required routing table for this.
+
+SG - This created and applied the necessary Security group access to allow the Manager and Worker nodes to talk to each other
+
+EC2 - This created the required Manager Node, initially we had a setup script that was executed on the Manager to ensure that required software was available to control and manage the Worker Nodes.  Due to there being several manual steps required to complete the Jenkins installation it was decided to create an image of the Manager VM with all of the required software installed and configuration completed.
+
+EKS - This created the required Kubernetes control plain to allow pods to be deployed within our infrastructure
+
+CW - This created a Monitoring Dashboard for the PetClinic application and generated a graph showing the CPU utilisation on the Manager Node 
 
 ## Overall Architecture
 # Interaction and Services
