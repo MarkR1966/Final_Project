@@ -9,7 +9,7 @@ pipeline {
 
             steps {
 
-                sh 'kaws eks update-kubeconfig --name FP-EKS-CLUSTER'
+                sh 'aws eks update-kubeconfig --name FP-EKS-CLUSTER'
 
             }
 
@@ -41,7 +41,7 @@ pipeline {
 
                 sh 'kubectl crete -f dev_nginx_pods.yml'
 
-                
+
                 }
 
         }
