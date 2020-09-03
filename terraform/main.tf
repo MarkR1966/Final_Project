@@ -47,6 +47,6 @@ module "eks" {
 }
 
 module "cloudwatch" {
-  source     = "./CW"
+  source = "./CW"
   manager_id = module.manager_node.ec2_id
 }

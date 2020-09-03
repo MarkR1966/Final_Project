@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_dashboard" "main" {
-  manager_id = var.manager_id
+  manager_id =var.manager_id
   dashboard_name = "Petclinic_Dashboard"
 
   dashboard_body = <<EOF
