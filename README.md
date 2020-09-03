@@ -117,6 +117,13 @@ The maximum spend for the project was £20. To make sure we didn't overspend we 
 
 ### Project Architecture
 
+## Overall Architecture
+# Interaction and Services
+The diagram below details the user interaction with the web app, it also shows the communication with containers.
+
+<a href="https://ibb.co/jybg2p3"><img src="https://i.ibb.co/CbmhZrV/user-Activity.png" alt="user-Activity" border="0" />User Activity</a>
+
+
 
 ## Architecture Design
 
@@ -128,11 +135,6 @@ The maximum spend for the project was £20. To make sure we didn't overspend we 
 ## Amazon Services
 
 ## Individual Showcases
-
-
-### Testing
-
-## Local Testing
 
 
 ### Deployment
