@@ -36,19 +36,6 @@
 ### Project Brief
 The brief the team received was to deploy a web application (angular js frontend & restful backend) using infrastructure as code, containerization, multi-environment support and continuous integration based on server changes via the VCS. The teams goal was to come up with a solution selecting the best tools for the each job and justify why they had chosen them.
 
-## Proposal
-The team proposed a CI pipeline utilising the following architecture tools for the automated workflow.
-
-* __Terraform__ used for the infrastructure as code deployment and configuration.
-* __Jenkins__ used for Continuous Integration, utilising webhooks to the VCS.
-* __GitHub__ VCS used for feature branch model and version control.
-* __Kubernetes__ cluster containerizing and running the app.
-* __CloudWatch__ project monitoring ie cost, upscaling. 
-
-Below shows the initial understanding of the architecture needed for the MVP. Terraform creates and configures the infrastructure(EKS cluster & Jenkins server), Jenkins deploys the app after a code push to the VCS using Kubernetes to the live app. 
-
-<a href="https://ibb.co/6gb4ncZ"><img src="https://i.ibb.co/qk9RyLn/initial-project-diagram.png" alt="initial-project-diagram" border="0" />Initial Architecture</a>
-
 ## Scope
 We will be working with these externally developed applications:
 
@@ -70,6 +57,19 @@ Multiple Environment support: How can a developer test their new features on an 
 How can changes on the GitHub repository automatically build and deploy to testing and live environments?
 
 Running costs. What are your monthly estimates? How could they be improved?
+
+## Proposal
+The team proposed a CI pipeline utilising the following architecture tools for the automated workflow.
+
+* __Terraform__ used for the infrastructure as code deployment and configuration.
+* __Jenkins__ used for Continuous Integration, utilising webhooks to the VCS.
+* __GitHub__ VCS used for feature branch model and version control.
+* __Kubernetes__ cluster containerizing and running the app.
+* __CloudWatch__ project monitoring ie cost, upscaling. 
+
+Below shows the initial understanding of the architecture needed for the MVP. Terraform creates and configures the infrastructure(EKS cluster & Jenkins server), Jenkins deploys the app after a code push to the VCS using Kubernetes to the live app. 
+
+<a href="https://ibb.co/6gb4ncZ"><img src="https://i.ibb.co/qk9RyLn/initial-project-diagram.png" alt="initial-project-diagram" border="0" />Initial Architecture</a>
 
 ### Trello Board
 Every member of our team had experience using Trello kanban board so we decided it best to stick with what we know and use it for the workflow, management and tracking of our project. All members could add boards to satisfy needs such as requirements, product backlog, task assignment, sprint detailing and for logging of issues. After the daily stand ups and sprint retro's we would update the boards accordingly. 
