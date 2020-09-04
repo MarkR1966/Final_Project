@@ -111,7 +111,7 @@ Our initial risk assessment was carried out before starting work on the project 
 
 ![Screen shot of inital risk assessment](https://imgur.com/RUXltWd.png)
 
-Colour coding the likelihood and impact columns allows us to quickly see what the biggest and most hard hitting risks to the project are meaning we could focus our attention on avoiding them.
+Colour coding the likelihood and impact columns allows us to quickly see what the biggest and most hard hitting risks to the are meaning we could focus our attention on avoiding them.
 
 ## Budgeting
 The maximum spend for the project was £20. To make sure we didn't overspend we set up a budget alarm in AWS to notify us if the project went over 50% that way we could evaluate what was costing the most and adjust accordingly. The final spend for the project was under £10.
@@ -143,20 +143,16 @@ The diagram below details the user interaction with the web app, it also shows t
 
 <a href="https://ibb.co/jybg2p3"><img src="https://i.ibb.co/CbmhZrV/user-Activity.png" alt="user-Activity" border="0" />User Activity</a>
 
-<a href="https://ibb.co/MV552RS"><img src="https://i.ibb.co/2tYYnjh/Dev-Ops-Toolchain-and-Process-Flow.png" alt="Dev-Ops-Toolchain-and-Process-Flow" border="0"></a><br /><a target='_blank' href='https://geojsonlint.com/'></a><br />
+
 
 
 ## Issues Encountered
 
 
-### Design Considerations
-
-## Amazon Services
-
-
-### Deployment
+## Deployment
 
 ## Toolset
+<a href="https://ibb.co/MV552RS"><img src="https://i.ibb.co/2tYYnjh/Dev-Ops-Toolchain-and-Process-Flow.png" alt="Dev-Ops-Toolchain-and-Process-Flow" border="0"></a><br /><a target='_blank' href='https://geojsonlint.com/'></a><br />
 
 ## CI Server Implementation 
 
@@ -166,3 +162,16 @@ The diagram below details the user interaction with the web app, it also shows t
 ### Improvements for Future Versions
 
 ### Installation and Setup Guide
+
+Spin up AWS VM using Ubuntu 18.04
+Clone down repository to VM
+Install terraform to your VM
+In Terraform folder in cloned project run commands 'terraform init' followed by 'terraform plan'
+Initialise deployment by running 'terraform apply'
+Navigate to your AWS console to confirm the new machines have been spun up. Look for VM called 'Manager' to confirm.
+Copy the IP address of manager and navigate to IPADDRESS:8080 to access Jenkins. (Credentials for default account to be provided)
+Jenkins comes with some predefined example jobs for deploying to Dev and Production environments.
+Run the predefined Jenkins pipeline. 
+The application will be built by the Jenkins pipeline, and deployed across the EKS cluster defined by Terraform.
+Navigate to your Load Balancer section within the EC2 page on AWS and find load balancer that has been spun up my terraform plan. (Loadbalancer Healthchecks must be complete before the application will be accessible)
+
