@@ -162,15 +162,15 @@ The diagram below details the user interaction with the web app, it also shows t
 
 ### Installation and Setup Guide
 
-Spin up AWS VM using Ubuntu 18.04
-Clone down repository to VM
-Install terraform to your VM
-In Terraform folder in cloned project run commands 'terraform init' followed by 'terraform plan'
-Initialise deployment by running 'terraform apply'
-Navigate to your AWS console to confirm the new machines have been spun up. Look for VM called 'Manager' to confirm.
-Copy the IP address of manager and navigate to IPADDRESS:8080 to access Jenkins. (Credentials for default account to be provided)
-Jenkins comes with some predefined example jobs for deploying to Dev and Production environments.
-Run the predefined Jenkins pipeline. 
-The application will be built by the Jenkins pipeline, and deployed across the EKS cluster defined by Terraform.
-Navigate to your Load Balancer section within the EC2 page on AWS and find load balancer that has been spun up my terraform plan. (Loadbalancer Healthchecks must be complete before the application will be accessible)
+- Spin up AWS VM using Ubuntu 18.04 <br>
+- Clone down repository to VM<br>
+- Install terraform to your VM<br>
+- In Terraform folder in cloned project run commands 'terraform init' followed by 'terraform plan'<br>
+- Initialise deployment by running 'terraform apply'<br>
+- Navigate to your AWS console to confirm the new machines have been spun up. Look for VM called 'Manager' to confirm.<br>
+- Copy the IP address of manager and navigate to IPADDRESS:8080 to access Jenkins. (Credentials for default account to be provided)<br>
+- Jenkins comes with some predefined example jobs for deploying to Dev and Production environments.<br>
+- Run the predefined Jenkins pipeline. <br>
+- The application will be built by the Jenkins pipeline, and deployed across the EKS cluster defined by Terraform.<br>
+- Navigate to your Load Balancer section within the EC2 page on AWS and find load balancer that has been spun up my terraform plan. (Loadbalancer Healthchecks must be complete before the application will be accessible)<br>
 
