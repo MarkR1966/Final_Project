@@ -156,7 +156,7 @@ The diagram below details the user interaction with the web app, it also shows t
 ## CI Server Implementation 
 
 ## Branch and Merge Log
-<a href="https://ibb.co/KqCx5mp%22%3E><img src="https://i.ibb.co/Z8yzfNp/mergelogs.png" alt="mergelogs" border="0"></a>
+<img src="https://i.ibb.co/Z8yzfNp/mergelogs.png" alt="mergelogs" border="0">
 
 ### Improvements for Future Versions
 
