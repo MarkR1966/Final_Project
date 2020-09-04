@@ -111,7 +111,7 @@ Our initial risk assessment was carried out before starting work on the project 
 
 ![Screen shot of inital risk assessment](https://imgur.com/RUXltWd.png)
 
-Colour coding the likelihood and impact columns allows us to quickly see what the biggest and most hard hitting risks to the are meaning we could focus our attention on avoiding them.
+Colour coding the likelihood and impact columns allows us to quickly see what the biggest and most hard hitting risks to the project are meaning we could focus our attention on avoiding them.
 
 ## Budgeting
 The maximum spend for the project was £20. To make sure we didn't overspend we set up a budget alarm in AWS to notify us if the project went over 50% that way we could evaluate what was costing the most and adjust accordingly. The final spend for the project was under £10.
