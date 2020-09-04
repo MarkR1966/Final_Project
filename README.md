@@ -38,8 +38,7 @@ The brief the team received was to deploy a web application (angular js frontend
 ## Proposal
 The team proposed a CI pipeline utilising the following architecture tools for the automated workflow.
 
-* __Terraform__ used for the infrastructure as code deployment.
-* __Terraform__ also used for the infrastructure configuration.
+* __Terraform__ used for the infrastructure as code deployment and configuration.
 * __Jenkins__ used for Continuous Integration, utilising webhooks to the VCS.
 * __GitHub__ VCS used for feature branch model and version control.
 * __Kubernetes__ cluster containerizing and running the app.
@@ -111,7 +110,7 @@ Our initial risk assessment was carried out before starting work on the project 
 
 ![Screen shot of inital risk assessment](https://imgur.com/RUXltWd.png)
 
-Colour coding the likelihood and impact columns allows us to quickly see what the biggest and most hard hitting risks to the are meaning we could focus our attention on avoiding them.
+Colour coding the likelihood and impact columns allows us to quickly see what the biggest and most hard hitting risks to the project, meaning we could focus our attention on avoiding them.
 
 ## Budgeting
 The maximum spend for the project was £20. To make sure we didn't overspend we set up a budget alarm in AWS to notify us if the project went over 50% that way we could evaluate what was costing the most and adjust accordingly. The final spend for the project was under £10.
